@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Broker</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #f0a500;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            background-color: #333;
+        }
+
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #28a745;
+            border-radius: 10px;
+        }
+
+        nav a:hover {
+            background-color: #218838;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        #listings #listing-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #listings .listing {
+            background-color: #444;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 20px;
+            width: 80%;
+        }
+
+        .listing a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .listing a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        #contact-info {
+            background-color: #444;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #contact-info p {
+            margin: 10px 0;
+        }
+
+        @media (min-width: 600px) {
+            #listings #listing-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #listings .listing {
+                width: 45%;
+                margin: 10px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #listings .listing {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Land Broker</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#listings">Listings</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Land Broker</h2>
+        <p>Your one-stop destination for buying and selling land.</p>
+    </section>
+
+    <section id="listings">
+        <h2>Featured Listings</h2>
+        <div id="listing-container">
+            <div class="listing">
+                <a href="california.html">
+                    <h3>Plot in California</h3>
+                    <p>A beautiful plot located in the heart of California.</p>
+                    <p>Price: $500,000</p>
+                </a>
+            </div>
+            <div class="listing">
+                <a href="texas.html">
+                    <h3>Farm in Texas</h3>
+                    <p>Spacious farm land perfect for agriculture.</p>
+                    <p>Price: $750,000</p>
+                </a>
+            </div>
+            <div class="listing">
+                <a href="florida.html">
+                    <h3>Land in Florida</h3>
+                    <p>Prime land for commercial development in Florida.</p>
+                    <p>Price: $1,200,000</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Learn more about our company and our mission.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div id="contact-info">
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Land Broker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
