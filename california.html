@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plot in California - Land Broker</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #f0a500;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            background-color: #333;
+        }
+
+        nav a {
+            color: #1e1e1e;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #adff2f;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #9acd32;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .property-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .property-header h2 {
+            margin: 0;
+            color: #f0a500;
+        }
+
+        .description,
+        .location-embed,
+        .price-details,
+        .location-address,
+        .video-container,
+        .buttons-container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .description h3,
+        .location-embed h3,
+        .price-details h3,
+        .location-address h3,
+        .video-container h3 {
+            margin-top: 0;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .buttons-container {
+            text-align: center;
+        }
+
+        .buttons-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 20px;
+            text-decoration: none;
+            margin: 10px 5px;
+        }
+
+        .buttons-container a:hover {
+            background-color: #218838;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: #fff;
+            border-radius: 20px;
+            text-decoration: none;
+            margin: 10px 5px;
+        }
+
+        .back-btn:hover {
+            background-color: #c82333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                padding: 8px 16px;
+            }
+
+            .buttons-container a, .back-btn {
+                padding: 8px 16px;
+                margin: 5px 3px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Land Broker</h1>
+        <nav>
+            <a href="index.html#home">Home</a>
+            <a href="index.html#listings">Listings</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="property-header">
+            <h2>Plot in California</h2>
+            <p>Price: $500,000</p>
+        </div>
+
+        <div class="description">
+            <h3>Description</h3>
+            <p>A beautiful plot located in the heart of California. This plot is perfect for residential development with scenic views and a convenient location.</p>
+        </div>
+
+        <div class="location-embed">
+            <h3>Location</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509908!2d144.96305771566836!3d-37.81410774275109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727dbf5b55a1a!2sGoogle!5e0!3m2!1sen!2sus!4v1622204392584!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="video-container">
+            <h3>Video</h3>
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="price-details">
+            <h3>Price Details</h3>
+            <p>Price per square foot: $50</p>
+            <p>Price per cent: $5000</p>
+            <p>Price per acre: $200,000</p>
+            <p>No. of acres: 2</p>
+            <p>Total price: $500,000</p>
+        </div>
+
+        <div class="location-address">
+            <h3>Location or Address</h3>
+            <p>1234 California St, Los Angeles, CA 90001</p>
+        </div>
+
+        <div class="buttons-container">
+            <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
+            <a href="https://www.google.com/maps/@?api=1&map_action=pano" target="_blank">Google Maps Street View</a>
+        </div>
+
+        <div class="buttons-container">
+            <a href="index.html" class="back-btn">Back to Home</a>
+            <a href="contact.html" class="back-btn">Contact Us</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Land Broker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
