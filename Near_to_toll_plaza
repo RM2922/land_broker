@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plot in Krishnagiri - Land Broker</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #f0a500;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            background-color: #333;
+        }
+
+        nav a {
+            color: #1e1e1e;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #adff2f;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #9acd32;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .property-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .property-header h2 {
+            margin: 0;
+            color: #f0a500;
+        }
+
+        .description,
+        .location-embed,
+        .price-details,
+        .location-address,
+        .video-container,
+        .buttons-container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .description h3,
+        .location-embed h3,
+        .price-details h3,
+        .location-address h3,
+        .video-container h3 {
+            margin-top: 0;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .buttons-container {
+            text-align: center;
+        }
+
+        .buttons-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 20px;
+            text-decoration: none;
+            margin: 10px 5px;
+        }
+
+        .buttons-container a:hover {
+            background-color: #218838;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: #fff;
+            border-radius: 20px;
+            text-decoration: none;
+            margin: 10px 5px;
+        }
+
+        .back-btn:hover {
+            background-color: #c82333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                padding: 8px 16px;
+            }
+
+            .buttons-container a, .back-btn {
+                padding: 8px 16px;
+                margin: 5px 3px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #f0a500;
+        }
+
+        .location-embed iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Land Broker</h1>
+        <nav>
+            <a href="index.html#home">Home</a>
+            <a href="index.html#listings">Listings</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="property-header">
+            <h2>Land in Krishnagiri</h2>
+            <p>Price: ₹4,50,00,000</p>
+        </div>
+
+        <div class="description">
+            <h1>Description</h1>
+            <h2>Prime Land Opportunity at Old Pet, Krishnagiri, Tamil Nadu</h2>
+<p><span style="font-size: 1.2em;"><strong>Welcome to Old Pet, Krishnagiri – a vibrant and strategically located area in Tamil Nadu, offering exceptional investment opportunities!</strong></p>
+<h3>Why Choose This Location?</h3>
+<ul>
+    <li><strong>Strategic Connectivity:</strong>
+        <ul>
+            <li>Situated near the <span class="highlight">Krishnagiri Toll Plaza</span>, ensuring excellent road connectivity.</li>
+            <li>Easy access to <span class="highlight">National Highway 44 (NH 44)</span>, a major arterial road linking major cities.</li>
+        </ul>
+    </li>
+    <li><strong>Proximity to Urban Centers:</strong>
+        <ul>
+            <li>Close to <span class="highlight">Krishnagiri town center</span>, offering a range of amenities.</li>
+            <li>Well-connected to major cities like <span class="highlight">Bangalore (90 km)</span> and <span class="highlight">Chennai (260 km)</span>.</li>
+        </ul>
+    </li>
+    <li><strong>Educational Institutions:</strong>
+        <ul>
+            <li>Near reputable <span class="highlight">schools and colleges</span>, making it an ideal residential area for families.</li>
+        </ul>
+    </li>
+    <li><strong>Healthcare Facilities:</strong>
+        <ul>
+            <li>Close to major <span class="highlight">hospitals and healthcare centers</span> ensuring easy access to medical services.</li>
+        </ul>
+    </li>
+    <li><strong>Commercial & Industrial Spots:</strong>
+        <ul>
+            <li>Proximity to industrial establishments like <span class="highlight">Sri Devaraaja Processing Factory</span> and <span class="highlight">Devaraj Food Products</span>, offering potential business opportunities.</li>
+            <li>Nearby <span class="highlight">SN Power Solutions</span> and <span class="highlight">MAK Bricks</span>, enhancing the commercial viability of the area.</li>
+        </ul>
+    </li>
+    <li><strong>Recreational and Religious Sites:</strong>
+        <ul>
+            <li>Near popular tourist spots like <span class="highlight">Krishnagiri Fort</span> and <span class="highlight">Lord Ganapathi Swamy Temple</span>, offering cultural and leisure activities.</li>
+            <li>Close to local recreational spots such as <span class="highlight">Alps Residency</span> and <span class="highlight">Sankal Thoop Dargah Shareef</span>.</li>
+        </ul>
+    </li>
+    <li><strong>Community and Lifestyle:</strong>
+        <ul>
+            <li>A well-established residential area with a vibrant community, including facilities like <span class="highlight">Masjid e Abdullah</span>.</li>
+        </ul>
+    </li>
+    <li>The road or path is <span class="highlight">30 feet wide</span> and it is located <span class="highlight">near the Krishnagiri Toll Plaza</span> with a short path (150 meters).</li>
+    <li>Nearby lands are priced at <span class="highlight">1800 rupees per square foot</span>, while our land costs just <span class="highlight">810 rupees per square foot</span>.</li>
+</ul>
+<p>Invest in Old Pet, Krishnagiri, and become part of a growing, well-connected community that promises high returns and a superior quality of life. Don’t miss this exceptional opportunity to invest in one of Tamil Nadu’s thriving locales!</p>
+
+        </div>
+
+        <div class="location-embed">
+            <h3>Location</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3894.5799136720557!2d78.203636!3d12.543965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDMyJzM4LjMiTiA3OMKwMTInMTMuMSJF!5e0!3m2!1sen!2sin!4v1717044858335!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1717045129726!6m8!1m7!1sTb-9vlfkwbi1ZPr0WkW8mg!2m2!1d12.54381557764528!2d78.20424141885222!3f288.3007642563692!4f0.511768653675972!5f0.7820865974627469" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="video-container">
+            <h3>Video</h3>
+            <video controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="price-details">
+          <h3>Price Details</h3>
+            <p><span style="font-size: 1.2em;"><strong>Price per square foot:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>₹803.5</strong></span></p>
+            <p><span style="font-size: 1.2em;"><strong>Price per cent:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>₹3,50,000</strong></span></p>
+            <p><span style="font-size: 1.2em;"><strong>Price per acre:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>₹3,50,00,000</strong></span></p>
+            <p><span style="font-size: 1.2em;"><strong>No. of acres:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>1.2</strong></span></p>
+            <p><span style="font-size: 1.2em;"><strong>Total price:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>₹4,20,00,000</strong></span></p>
+        </div>
+
+
+        <div class="location-address">
+            <h3><span style="font-family: 'Arial'; font-weight: bold;">Location or Address</span></h3>
+            <p><span style="font-family: 'Courier New'; font-weight: bold; color: #00ffaa;">Old Pet, Krishnagiri Toll Plaza, Krishnagiri, Tamil Nadu</span></p>
+            <p><span style="font-family: 'Courier New'; font-weight: bold; color: #00ccff;">Coordinates: 12°32'38.3"N 78°12'13.1"E</span></p>
+        </div>
+        
+
+        <div class="buttons-container">
+            <a href="https://maps.app.goo.gl/Q5MZqa6L18gxrb1c6" target="_blank">Google Maps</a>
+            <a href="https://maps.app.goo.gl/Qe8yELS2ZWkRTiSg9" target="_blank">Google Maps Street View</a>
+        </div>
+
+        <div class="buttons-container">
+            <a href="index.html" class="back-btn">Back to Home</a>
+            <a href="index.html#contact" class="back-btn">Contact Us</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Land Broker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
