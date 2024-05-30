@@ -8,30 +8,35 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1e1e1e;
+            background-color: #121212;
             color: #f0f0f0;
         }
 
         header {
-            background-color: #333;
-            padding: 20px 0;
+            background-color: #1c1c1c;
+            padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header h1 {
             margin: 0;
             color: #f0a500;
-            font-size: 2em;
+            font-size: 2.5em;
+            letter-spacing: 2px;
         }
 
         nav {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             gap: 20px;
             padding: 10px 0;
-            background-color: #444;
+            background-color: #2a2a2a;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -39,8 +44,9 @@
             text-decoration: none;
             padding: 10px 20px;
             background-color: #28a745;
-            border-radius: 20px;
+            border-radius: 30px;
             font-weight: bold;
+            transition: background-color 0.3s;
         }
 
         nav a:hover {
@@ -48,43 +54,74 @@
         }
 
         section {
-            padding: 20px;
+            padding: 40px 20px;
             margin: 20px 0;
+            text-align: center;
         }
 
         #home p {
             font-size: 1.2em;
-            line-height: 1.6;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        #listings h2,
-        #about h2,
-        #contact h2 {
+        h2 {
             color: #f0a500;
-            font-size: 1.5em;
-            margin-bottom: 10px;
+            font-size: 2em;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #f0a500;
+            margin: 10px auto 0;
         }
 
         #listings .listing,
         #about p,
         #contact-info p {
             font-size: 1.2em;
-            line-height: 1.6;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
         }
 
         #listings #listing-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            #listings #listing-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            #listings .listing {
+                width: 45%;
+            }
         }
 
         #listings .listing {
-            background-color: #333;
+            background-color: #1e1e1e;
             border-radius: 10px;
-            margin: 20px 0;
             padding: 20px;
-            width: 80%;
+            width: 90%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #listings .listing:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .listing a {
@@ -99,24 +136,47 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
+            background-color: #1c1c1c;
+            border-top: 1px solid #333;
         }
 
         #contact {
-            background-color: #666;
-            color: #f0f0f0;
+            background-color: #2a2a2a;
         }
 
         #contact-info {
-            background-color: #777;
+            background-color: #333;
             border-radius: 10px;
             padding: 20px;
             text-align: center;
-            margin-bottom: 20px;
+            margin: 0 auto;
+            width: fit-content;
         }
 
         #contact-info p {
             margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            nav a {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+            section {
+                padding: 20px 10px;
+            }
+            #home p, 
+            #listings .listing, 
+            #about p, 
+            #contact-info p {
+                font-size: 1em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -142,7 +202,7 @@
             <div class="listing">
                 <a href="california.html">
                     <h3>Plot in Krishnagiri</h3>
-                    <p><span style="font-size: 1.2em; color: hsl(165, 100%, 50%);"><strong>A beautiful plot located in the way of veppanapalli.</strong></span></p>
+                    <p><span style="font-size: 1.2em; color: hsl(165, 100%, 50%);"><strong>A beautiful plot located in the way of Veppanapalli.</strong></span></p>
                     <p><span style="font-size: 1.2em;"><strong>Price:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>₹16,72,50,000</strong></span></p>
                     <p><span style="font-size: 1.2em;"><strong>No. of Acres:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>6.69</strong></span></p>
                 </a>
@@ -160,13 +220,13 @@
 
     <section id="about">
         <h2>About Us</h2>
-        <p><span style="font-size: 1.2em;"><strong>Land Broker is dedicated to providing you with the best land buying experience. With years of expertise in the real estate industry, we ensure that every transaction is smooth and transparent. Our mission is to help you find the perfect piece of land that meets your needs and exceeds your expectations.</strong></span></p>
+        <p>Land Broker is dedicated to providing you with the best land buying experience. With years of expertise in the real estate industry, we ensure that every transaction is smooth and transparent. Our mission is to help you find the perfect piece of land that meets your needs and exceeds your expectations.</p>
     </section>
 
     <section id="contact">
         <h2>Contact Us</h2>
         <div id="contact-info">
-            <p><span style="font-size: 1.2em;"><strong>Phone no:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>+91 9952629179 </strong></span></p></p>
+            <p><strong>Phone no:</strong> <span style="color: #ff6600;">+91 9952629179</span></p>
         </div>
     </section>
 
@@ -174,4 +234,4 @@
         <p>&copy; 2024 Land Broker. All rights reserved.</p>
     </footer>
 </body>
-</html>
+    </html>
