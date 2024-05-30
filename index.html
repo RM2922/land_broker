@@ -142,6 +142,27 @@
             text-decoration: underline;
         }
 
+        .listing .view-details {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #f0a500;
+            color: #121212;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .listing .view-details:hover {
+            background: #ff7e5f;
+            transform: translateY(-3px);
+        }
+
+        .listing .view-details:active {
+            transform: translateY(1px);
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -209,20 +230,18 @@
         <h2>Featured Listings</h2>
         <div id="listing-container">
             <div class="listing">
-                <a href="california.html">
-                    <h3>Plot in Krishnagiri</h3>
-                    <p><span style="font-size: 1.2em; color: hsl(165, 100%, 50%);"><strong>A beautiful plot located in the way of Veppanapalli.</strong></span></p>
-                    <p><span style="font-size: 1.2em;"><strong>Price:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>₹16,72,50,000</strong></span></p>
-                    <p><span style="font-size: 1.2em;"><strong>No. of Acres:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>6.69</strong></span></p>
-                </a>
+                <h3>Plot in Krishnagiri</h3>
+                <p><span style="font-size: 1.2em; color: hsl(165, 100%, 50%);"><strong>A beautiful plot located in the way of Veppanapalli.</strong></span></p>
+                <p><span style="font-size: 1.2em;"><strong>Price:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>₹16,72,50,000</strong></span></p>
+                <p><span style="font-size: 1.2em;"><strong>No. of Acres:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>6.69</strong></span></p>
+                <a href="california.html" class="view-details">View Details</a>
             </div>
             <div class="listing">
-                <a href="Near_to_toll_plaza.html">
-                    <h3>Plot in Krishnagiri</h3>
-                    <p><span style="font-size: 1.2em; color: hsl(165, 100%, 50%);"><strong>A beautiful plot located in the way of Hosur near to Krishnagiri toll Plaza.</strong></span></p>
-                    <p><span style="font-size: 1.2em;"><strong>Price:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>₹4,20,00,000</strong></span></p>
-                    <p><span style="font-size: 1.2em;"><strong>No. of Acres:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>1.2</strong></span></p>
-                </a>
+                <h3>Plot in Krishnagiri</h3>
+                <p><span style="font-size: 1.2em; color: hsl(165, 100%, 50%);"><strong>A beautiful plot located in the way of Hosur near to Krishnagiri toll Plaza.</strong></span></p>
+                <p><span style="font-size: 1.2em;"><strong>Price:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>₹4,20,00,000</strong></span></p>
+                <p><span style="font-size: 1.2em;"><strong>No. of Acres:</strong></span> <span style="font-size: 1.2em; color: #ff6600;"><strong>1.2</strong></span></p>
+                <a href="Near_to_toll_plaza.html" class="view-details">View Details</a>
             </div>
         </div>
     </section>
@@ -244,3 +263,4 @@
     </footer>
 </body>
     </html>
+    
