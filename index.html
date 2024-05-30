@@ -33,24 +33,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
             padding: 10px 0;
             background-color: #2a2a2a;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            overflow-x: auto;
         }
 
         nav a {
             color: #f0f0f0;
             text-decoration: none;
-            padding: 10px 20px;
-            background-color: #28a745;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
             border-radius: 30px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1em;
+            white-space: nowrap;
         }
 
         nav a:hover {
-            background-color: #218838;
+            background: linear-gradient(135deg, #feb47b, #ff7e5f);
+            transform: translateY(-3px);
+        }
+
+        nav a:active {
+            transform: translateY(1px);
         }
 
         section {
