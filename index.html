@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Land Promoter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- Include jQuery library -->
     <style>
         body {
             margin: 0;
@@ -31,26 +32,26 @@
 
         nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-around; /* Adjust spacing between buttons */
             align-items: center;
-            gap: 10px;
             padding: 10px 0;
             background-color: #2a2a2a;
-            flex-wrap: nowrap;
-            overflow-x: auto;
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
+            white-space: nowrap; /* Prevent button wrapping */
         }
 
         nav a {
+            flex: 1; /* Allow buttons to grow and shrink evenly */
+            min-width: 100px; /* Set minimum width for each button */
+            text-align: center;
             color: #f0f0f0;
             text-decoration: none;
-            padding: 12px 24px;
+            padding: 12px 0;
             background: linear-gradient(135deg, #ff7e5f, #feb47b);
             border-radius: 30px;
             font-weight: bold;
             transition: background 0.3s, transform 0.3s;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            font-size: 1em;
-            white-space: nowrap;
         }
 
         nav a:hover {
@@ -192,8 +193,8 @@
                 font-size: 2em;
             }
             nav a {
-                padding: 8px 15px;
-                font-size: 0.9em;
+                min-width: auto; /* Remove minimum width on smaller screens */
+                padding: 12px 5px; /* Adjust padding for smaller screens */
             }
             section {
                 padding: 20px 10px;
@@ -207,6 +208,37 @@
             h2 {
                 font-size: 1.5em;
             }
+        }
+
+        /* Styles for translation buttons at the bottom of the screen */
+        .translation-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .translation-buttons button {
+            padding: 10px 20px;
+            background-color: #f0a500;
+            color: #121212;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .translation-buttons button:hover {
+            background-color: #ff7e5f;
+            transform: translateY(-3px);
+        }
+
+        .translation-buttons button:active {
+            transform: translateY(1px);
         }
     </style>
 </head>
@@ -261,6 +293,39 @@
     <footer>
         <p>&copy; 2024 Land Promoter. All rights reserved.</p>
     </footer>
+
+    <!-- Translation Buttons and Script -->
+    <div class="translation-buttons">
+        <button id="translate-tamil-btn">Translate to Tamil</button>
+        <button id="translate-english-btn" style="display: none;">Translate to English</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#translate-tamil-btn').click(function() {
+                var elementsToTranslate = $('h1, h2, p, a');
+
+                elementsToTranslate.each(function() {
+                    var element = $(this);
+                    var textToTranslate = element.text();
+
+                    var url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ta&dt=t&q=" + encodeURIComponent(textToTranslate);
+
+                    $.getJSON(url, function(data) {
+                        var translatedText = data[0][0][0];
+                        element.text(translatedText);
+                    });
+                });
+
+                // Show the English translation button and hide the Tamil translation button
+                $('#translate-english-btn').show();
+                $('#translate-tamil-btn').hide();
+            });
+
+            $('#translate-english-btn').click(function() {
+                location.reload(); // Reload the page to get the original English content
+            });
+        });
+    </script>
 </body>
-    </html>
-    
+</html>
